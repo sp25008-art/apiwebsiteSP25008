@@ -1,0 +1,149 @@
+
+/* Diseño general de la página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #243447;
+    margin: 0;
+    padding: 25px;
+}
+
+/* Encabezado */
+h1 {
+    color: #0D3B66;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Botón para obtener productos */
+button {
+    background-color: #2E86EB;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0D3B66;
+}
+
+/* Filtros */
+#filtroprods {
+    margin-top: 20px;
+}
+
+#filtroprods input[type="checkbox"] {
+    margin: 8px 5px;
+    accent-color: #2E86EB;
+}
+
+/* Instrucciones */
+ol {
+    color: #0D3B66;
+    line-height: 1.8;
+}
+
+/* Contenedor de la tabla */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+/* Tabla de productos */
+#tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #d4dce5;
+}
+
+/* Encabezados */
+#tabla thead th {
+    background-color: #0D3B66;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Celdas */
+#tabla td {
+    border: 1px solid #d4dce5;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/* Filas alternas */
+#tabla tbody tr:nth-child(even) {
+    background-color: #eaf4ff;
+}
+
+#tabla tbody tr:hover {
+    background-color: #d7ebff;
+}
+
+/* Imágenes */
+#tabla td.foto img {
+    width: 100px;
+    height: 110px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#tabla td.foto img:hover {
+    transform: scale(1.08);
+}
+
+/* Precio */
+#tabla td.price {
+    white-space: nowrap;
+    font-weight: bold;
+    color: #0D3B66;
+}
+
+/* Calificación */
+#tabla td.rating {
+    white-space: nowrap;
+    text-align: center;
+    font-weight: bold;
+    color: #8a6500;
+}
+
+/* Descripción */
+#tabla td.description {
+    min-width: 250px;
+    line-height: 1.5;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #tabla {
+        font-size: 13px;
+    }
+
+    #tabla td,
+    #tabla th {
+        padding: 6px;
+    }
+
+    #tabla td.foto img {
+        width: 70px;
+        height: 80px;
+    }
+}
